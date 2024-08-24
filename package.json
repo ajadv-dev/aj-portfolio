@@ -1,5 +1,5 @@
 {
-  "name": "ryan",
+  "name": "aj-portfolio",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -13,13 +13,14 @@
     "font-awesome": "^4.7.0",
     "isotope-layout": "^3.0.6",
     "next": "12.2.5",
-    "react": "18.2.0",
+    "react": "18.3.1",
     "react-dom": "18.2.0",
     "swiper": "^8.3.2",
-    "typed.js": "^2.0.12"
+    "typed.js": "^2.0.12",
+    "yarn": "^1.22.22"
   },
   "devDependencies": {
     "eslint": "8.22.0",
-    "eslint-config-next": "12.2.5"
+    "eslint-config-next": "14.2.6"
   }
 }
