@@ -1,9 +1,12 @@
 import { Fragment } from "react";
+import TypingAnimation from "../TypingAnimation";
+
 const bio_ = ` <p>
-<strong>Hello! I’m Donald Wellborn.</strong>
-Back-end &amp; Frond-end developer from UK, London. I have rich
-experience in wordpress, also I am good at Magento. I love to
-talk with you about our unique.
+<strong>Hello! I’m Abhijeet Jadhav</strong>, 
+a Full Stack Web Developer and Design Technologist based in Krakow, Poland.
+I have a strong background in ReactJS, Angular, and JavaScript, Typescript and have worked across finance and e-learning domains.
+Skilled in both front and back-end technologies, I’m always eager to explore new challenges, especially in immersive tech like AR/VR.
+<br>Let’s team up to build something great!</br>
 </p>`;
 const AboutMe = ({ bio }) => {
   return (
@@ -11,17 +14,17 @@ const AboutMe = ({ bio }) => {
       <div className="content about">
         {/* title */}
         <div className="title">
-          <span className="first-word">About</span> Me
+          Hello, I'm <span className="first-word"><TypingAnimation /></span>
         </div>
         {/* content */}
         <div className="row">
-          <div className="col col-d-6 col-t-6 col-m-12 border-line-v">
+          <div className="col col-d-12 col-t-12 col-m-12 border-line-v">
             <div
               className="text-box"
               dangerouslySetInnerHTML={{ __html: bio ? bio : bio_ }}
             ></div>
           </div>
-          <div className="col col-d-6 col-t-6 col-m-12 border-line-v">
+          {/* <div className="col col-d-6 col-t-6 col-m-12 border-line-v">
             <div className="info-list">
               <ul>
                 <li>
@@ -38,7 +41,7 @@ const AboutMe = ({ bio }) => {
                 </li>
               </ul>
             </div>
-          </div>
+          </div> */}
           <div className="clear" />
         </div>
       </div>
@@ -57,7 +60,7 @@ export const AboutMeClassic = () => {
         <div className="col col-d-12 col-t-12 col-m-12 border-line-v">
           <div className="text-box">
             <p>
-              I am Ryan Adlard, web designer from USA, California. I have rich
+              I am Abhijeet Jadhav, web designer from USA, California. I have rich
               experience in web site design and building and customization, also
               I am good at wordpress. I love to talk with you about our unique.
             </p>
