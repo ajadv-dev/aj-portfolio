@@ -1,12 +1,9 @@
 name: Deploy to GitHub Pages
 
 on:
-  # Trigger the workflow on push to the main branch
   push:
     branches:
       - master
-
-  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
 jobs:
@@ -20,24 +17,20 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '21'
+          node-version: '21' # Ensure you're using the correct Node.js version
 
       - name: Install dependencies
         run: npm install
 
       - name: Build project
-        run: npm run build
-
-      - name: Export static files
-        run: npm run export
+        run: npm run build # Run the Next.js build command
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./out
+          publish_dir: ./out # Make sure this points to the 'out' directory
 
-      # Optional: You can add caching to speed up future runs
       - name: Cache node modules
         uses: actions/cache@v3
         with:
