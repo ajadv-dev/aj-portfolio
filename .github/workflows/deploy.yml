@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages
+name: Build and Deploy to GitHub Pages
 
 on:
   push:
@@ -7,7 +7,8 @@ on:
   workflow_dispatch:
 
 jobs:
-  deploy:
+  # First Job: Build the Project
+  build:
     runs-on: ubuntu-latest
 
     steps:
@@ -17,28 +18,28 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '21' # Ensure you're using the correct Node.js version
+          node-version: '21'
 
       - name: Install dependencies
         run: npm install
 
-      - name: Build project
-        run: npm run build # Run the Next.js build command
+      - name: Build the project
+        run: npm run build
 
-      - name: List build output files
+      - name: Verify build output
         run: ls -la ./out
+
+  # Second Job: Deploy to GitHub Pages (runs after the build job)
+  deploy:
+    needs: build # This ensures the 'deploy' job runs only after the 'build' job
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./out # Make sure this points to the 'out' directory
-
-      - name: Cache node modules
-        uses: actions/cache@v3
-        with:
-          path: |
-            node_modules
-          key: ${{ runner.os }}-node_modules-${{ hashFiles('package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node_modules
+          publish_dir: ./out
