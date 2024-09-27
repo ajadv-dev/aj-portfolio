@@ -25,6 +25,9 @@ jobs:
       - name: Build project
         run: npm run build # Run the Next.js build command
 
+      - name: List build output files
+        run: ls -la ./out
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
