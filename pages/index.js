@@ -51,7 +51,7 @@ const IndexDark = () => {
             className="slide"
             style={{ backgroundImage: "url(images/avatar-aj.jpg)" }}
           />
-          <div className="title">Abhijeet Jadhav</div>
+          <div className="title">Abhijeet Jadhav checking deployment...</div>
           <TypingAnimation />
           <div className="social">
             <a target="_blank" rel="noreferrer" href="https://dribbble.com/">
