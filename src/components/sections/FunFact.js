@@ -110,10 +110,10 @@ export const FunFactWriter = () => {
             </div>
             <div className="user">
               <div className="img">
-                <img src="images/profile.png" alt="Ryan Adlard" />
+                <img src="images/profile.png" alt="Abhijeet Jadhav" />
               </div>
               <div className="info">
-                <div className="name">Ryan Adlard</div>
+                <div className="name">Abhijeet Jadhav</div>
                 <div className="company">Web Designer</div>
               </div>
               <div className="clear" />

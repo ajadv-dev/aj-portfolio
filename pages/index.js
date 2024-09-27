@@ -29,10 +29,13 @@ const RecentWorks = dynamic(
   }
 );
 const bio = `<p>
-I am Ryan Adlard, web designer from USA, California. I have rich experience in
-web site design and building and customization, also I am good at wordpress.
-I love to talk with you about our unique.
+<strong>Hello! I’m Abhijeet Jadhav</strong>, 
+a Full Stack Web Developer and Design Technologist based in Krakow, Poland.
+I have a strong background in ReactJS, Angular, and JavaScript, Typescript and have worked across finance and e-learning domains.
+Skilled in both front and back-end technologies, I’m always eager to explore new challenges, especially in immersive tech like AR/VR.
+<br>Let’s team up to build something great!</br>
 </p>`;
+
 const IndexDark = () => {
   return (
     <Layout bg={"blured"}>
@@ -46,7 +49,7 @@ const IndexDark = () => {
         <div className="profile no-photo">
           <div
             className="slide"
-            style={{ backgroundImage: "url(images/avatar1.jpg)" }}
+            style={{ backgroundImage: "url(images/avatar-aj.jpg)" }}
           />
           <div className="title">Abhijeet Jadhav</div>
           <TypingAnimation />
