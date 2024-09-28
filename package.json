@@ -21,7 +21,6 @@
     "yarn": "^1.22.22"
   },
   "devDependencies": {
-    "eslint": "^8.22.0",
     "eslint-config-next": "14.2.6"
   }
 }
