@@ -161,7 +161,7 @@ const IndexDark = () => {
           <Quote />
         </About>
         <Resume>
-          <ResumeSection data={resumeSectionData} />
+          <ResumeSection resumeSectionData={resumeSectionData} />
           <Skills />
           <Testimonials />
         </Resume>

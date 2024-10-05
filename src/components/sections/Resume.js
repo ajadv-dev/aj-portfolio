@@ -1,11 +1,11 @@
 import { Fragment, useState } from "react";
 
-const data = {
+const resumeSectionData_ = {
   resumeData : [
     {
       date : 'Feb 2020 - Present',
       name: 'Design Technologist II',
-      company: 'frog designs Inc',
+      company: 'frog designs Inc 123',
       active: true,
       description: 'Monitored technical aspects of the front-end delivery for several projects.'
     },
@@ -63,10 +63,10 @@ const data = {
   ]
 }
 
-const ResumeSection = ({data}) => {
+const ResumeSection = ({resumeSectionData}) => {
   
-  const [resumeData, ] = useState(data.resumeData);
-  const [educationData, ] = useState(data.educationData);
+  const [resumeData, ] = useState(resumeSectionData ? resumeSectionData.resumeData : resumeSectionData_.resumeData);
+  const [educationData, ] = useState(resumeSectionData ? resumeSectionData.educationData : resumeSectionData_.educationData);
 
   return (
     <Fragment>
