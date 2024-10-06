@@ -1782,6 +1782,13 @@
   width: 24%;
 }
 
+@media (max-width: 560px) {
+  .content.skills .row .col.col-d-12 .skills-list.circles ul li,
+  .content.skills .row .col.col-t-12 .skills-list.circles ul li {
+    width: 47%;
+  }
+}
+
 .skills-list.circles ul li .name {
   position: absolute;
   top: 130px;
