@@ -5,7 +5,6 @@ import ImageView from "../components/popup/ImageView.js";
 import VideoPopup from "../components/popup/VideoPopup.js";
 import { createSkillsDot, dotResize } from "../utils.js";
 import Background from "./Background.js";
-import ContentSidebar from "./ContentSidebar.js";
 
 const Layout = ({
   children,
@@ -38,7 +37,6 @@ const Layout = ({
         >
           {children}
         </div>
-        <ContentSidebar />
       </div>
     </Fragment>
   );
